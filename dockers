@@ -1,0 +1,6 @@
+sudo docker run -d --network homeserver --restart unless-stopped --name selenium -p 4444:4444 selenium/standalone-chrome 
+sudo docker run -d --network homeserver --restart unless-stopped --name core -p 8080:8080 homeserver-core
+sudo docker run -d --network homeserver --restart unless-stopped --name mongodb -p 27017:27017 mongodb/mongodb-community-server:latest
+
+
+sudo docker network create networkname
